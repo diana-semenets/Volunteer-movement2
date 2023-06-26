@@ -433,8 +433,8 @@
             en: "Cherkasy, Ukraine"
         },
         "home_page-14": {
-            ukr: "Черкаси, Україна",
-            en: "Cherkasy, Ukraine"
+            ukr: "Кропивницький, Україна",
+            en: "Kropyvnytskyi, Ukraine"
         },
         "home_page-15": {
             ukr: "Офіційний сервіс",
