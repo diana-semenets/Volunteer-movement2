@@ -374,6 +374,10 @@
         thousand = 1e3;
         sumDonat.value = thousand;
     }));
+
+
+
+    
     const langButtons = document.querySelectorAll("[data-btn]");
     const allLangs = [ "ukr", "en" ];
     const currentPathName = window.location.pathname;
@@ -1213,7 +1217,7 @@
             currentTexts = homeTexts;
             break;
 
-          case "/partners.html":
+          case "/Volunteer-movement2/partners.html":
             currentTexts = partnersTexts;
             break;
 
