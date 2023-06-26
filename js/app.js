@@ -1217,7 +1217,7 @@
             currentTexts = homeTexts;
             break;
 
-          case "/Volunteer-movement2/partners.html":
+          case "/partners.html":
             currentTexts = partnersTexts;
             break;
 
