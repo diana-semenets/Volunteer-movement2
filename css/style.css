@@ -491,7 +491,9 @@ h6 {
   line-height: 1.375rem;
   text-transform: uppercase;
 }
-
+.header-page__box .header__btns-btn--active {
+  color: #1A1A1A;
+}
 .header__btns-btn--active {
   color: #fff;
 }
@@ -2541,10 +2543,15 @@ h6 {
 }
 
 @media (max-width: 320px) {
-  .info__name-title,
-  .cars__title {
+  .info__name-title {
     font-weight: 600;
     font-size: 32px;
+  }
+  .cars__title {
+    max-width: 320px;
+    font-size: 30px;
+    font-weight: 500;
+  
   }
 }
 
