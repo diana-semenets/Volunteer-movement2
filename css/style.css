@@ -277,6 +277,7 @@ h6 {
 }
 
 .btn-blue {
+  width: 100%;
   padding: 20px 40px;
   border-radius: 72px;
   display: -webkit-box;
@@ -822,6 +823,7 @@ h6 {
   line-height: 37px;
   display: -webkit-box;
   display: -ms-flexbox;
+  gap: 10px;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1107,24 +1109,26 @@ h6 {
 .car {
   padding: 56px 0;
   border-top: 1px solid #4A4A4A;
-  display: -webkit-box;
-  display: -ms-flexbox;
+/*  display: -webkit-box;
+  display: -ms-flexbox; */
   display: flex;
+  gap: 10px;
+  justify-content: space-between;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+         
 }
 
 .car__content {
-  max-width: 347px;
+  max-width: 526px; 
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  align-content: space-between;
+  
 }
 
 .car__title {
+  max-width: 347px;
   font-weight: 600;
   line-height: 49px;
 }
@@ -1143,11 +1147,7 @@ h6 {
 
 .car__img {
   max-width: 635px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 59.4%;
-          flex: 0 59.4%;
-  -webkit-transition: all ease 0.3s;
-  -o-transition: all ease 0.3s;
+  flex: 0 59.4%;
   transition: all ease 0.3s;
 }
 
@@ -2587,6 +2587,7 @@ h6 {
   }
 
   .info__box {
+    width: 100%;
     gap: 15px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2601,7 +2602,10 @@ h6 {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
   }
-
+  .car__content {
+    max-width: none;
+    grid-template-columns: 1fr;
+  }
   .car__title {
     margin: 16px 0 36px;
   }
