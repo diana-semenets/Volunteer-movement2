@@ -183,7 +183,7 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           */
-  overflow: hidden;  
+  overflow: hidden; 
   width: 100%;
 }
 
@@ -700,7 +700,7 @@ h6 {
   margin: 0 auto;
   padding-top: 166px;
   padding-bottom: 160px;
-  overflow: hidden;
+  
 }
 
 @supports (padding-left: clamp( 1.5rem , 0.4090909091rem  +  5.4545454545vw , 4.5rem )) {
@@ -764,6 +764,7 @@ h6 {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
 .main__info {
@@ -971,7 +972,8 @@ h6 {
   display: grid;
   gap: 24px;
 /*  -ms-grid-columns: (minmax(200px, 636px))[2]; */
-  grid-template-columns: repeat(2, minmax(200px, 636px));
+  /*grid-template-columns: repeat(2, minmax(300px, 636px)); */
+  grid-template-columns: repeat(2, minmax(250px, 636px));
   border-bottom: 1px solid #4A4A4A;
 }
 
@@ -1339,6 +1341,7 @@ h6 {
 
 .items-item__text {
   max-width: 526px;
+  margin-right: 10px;
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
@@ -1371,9 +1374,10 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s; 
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
+  
 }
 
 .items-item-btn:hover {
@@ -2622,12 +2626,17 @@ h6 {
 
   .items-item__text {
     margin: 12px 0 24px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .items-item-btn {
     width: 100%;
+    padding: 26px 26px 26px 40px;
   }
-
+  .items-item-btn a {
+    font-size: 16px;
+  }
   .donat-tabs__navigation {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
