@@ -327,15 +327,21 @@
     document.addEventListener("keydown", (e => {
         if (e.code === "Escape" && modal.classList.contains("show")) closeMode();
     }));
+
+
+
     const btnValuta = document.querySelector(".sum__input-title");
     const bthArrowValuta = document.querySelector(".sum__input-icon");
     const listValuta = document.querySelector(".sum__valuta");
     const itemValuta = listValuta.querySelectorAll(".sum__valuta-item");
     const dropdownItemHidden = document.querySelector(".dropdown__item-hidden");
+    const sumBtnValuta = document.querySelectorAll('#sum__btn-valuta');
+
     let oneHundred = document.querySelector(".one-hundred");
     let fiveHundred = document.querySelector(".five-hundred");
     let thousand = document.querySelector(".thousand");
     let sumDonat = document.querySelector("#sum-donat");
+
     btnValuta.addEventListener("click", (function() {
         listValuta.classList.toggle("hidden");
         bthArrowValuta.classList.toggle("arrow-open");
@@ -344,10 +350,17 @@
     itemValuta.forEach((function(listItem) {
         listItem.addEventListener("click", (function(e) {
             e.stopPropagation();
-            btnValuta.innerText = this.innerText;
-            dropdownItemHidden.value = this.dataset.value;
+            btnValuta.innerText = this.innerText;            
+            dropdownItemHidden.value = this.dataset.value;            
             listValuta.classList.add("hidden");
             bthArrowValuta.classList.remove("arrow-open");
+
+            /*----валюта на баттонах---------*/
+            
+            sumBtnValuta.forEach((item) => {
+                item.innerHTML = this.dataset.value;
+            })
+            /*------------------------------*/
         }));
     }));
     document.addEventListener("click", (function(e) {
@@ -375,9 +388,8 @@
         sumDonat.value = thousand;
     }));
 
+/*------------langs----------------*/
 
-
-    
     const langButtons = document.querySelectorAll("[data-btn]");
     const allLangs = [ "ukr", "en" ];
     const currentPathName = window.location.pathname;
@@ -521,8 +533,8 @@
             en: "How can you get involved?"
         },
         "home_page-35": {
-            ukr: "Як ти можеш долучитись?",
-            en: "How can you get involved?"
+            ukr: "Ти можеш підтримати нашу ініціативу своїм донатом. Це може бути як одноразовий внесок, так і підписка на щомісячний донат. ",
+            en: "You can support our initiative with your donation. It can be either a one-time contribution or a subscription to a monthly donation."
         },
         "home_page-36": {
             ukr: "Давай наближувати перемогу разом!",
@@ -1079,7 +1091,7 @@
             en: "The fund purchase Hyundai off-roaders and minivans. Our partner, the Hyundai service center in Dnipro, issues cars and provides their technical support."
         },
         "help_page-14": {
-            ukr: "В подальшому за вашої підтримки, ми плануємо масшабуватись та задіювати сервісні центри наших партнерів у містах Черкаси та Кропівницький. Так ми зможемо допомогти більшій кількості наших військових, забезпечивши іх автомобілями та безкоштовним технічним супровідом.",
+            ukr: "В подальшому за вашої підтримки, ми плануємо масшабуватись та задіювати сервісні центри наших партнерів у містах Черкаси та Кропівницький. Так ми зможемо допомогти більшій кількості наших військових, забезпечивши їх автомобілями та безкоштовним технічним супровідом.",
             en: "In the future, with your support, we plan to expand and use the service centers of our partners in the cities of Cherkasy and Kropyvnytskyi. So we will be able to help more of our military by providing them with cars and free technical support."
         },
         "help_page-15": {

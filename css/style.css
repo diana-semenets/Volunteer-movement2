@@ -1786,7 +1786,9 @@ h6 {
 .dropdown__item-hidden {
   display: none;
 }
-
+#sum__btn-valuta {
+  text-transform: uppercase;
+}
 .hidden {
   display: none;
 }
