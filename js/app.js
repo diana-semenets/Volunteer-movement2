@@ -1091,7 +1091,7 @@
             en: "The fund purchase Hyundai off-roaders and minivans. Our partner, the Hyundai service center in Dnipro, issues cars and provides their technical support."
         },
         "help_page-14": {
-            ukr: "В подальшому за вашої підтримки, ми плануємо масшабуватись та задіювати сервісні центри наших партнерів у містах Черкаси та Кропівницький. Так ми зможемо допомогти більшій кількості наших військових, забезпечивши їх автомобілями та безкоштовним технічним супровідом.",
+            ukr: "В подальшому за вашої підтримки, ми плануємо масшабуватись та задіювати сервісні центри наших партнерів у містах Черкаси та Кропивницький. Так ми зможемо допомогти більшій кількості наших військових, забезпечивши їх автомобілями та безкоштовним технічним супровідом.",
             en: "In the future, with your support, we plan to expand and use the service centers of our partners in the cities of Cherkasy and Kropyvnytskyi. So we will be able to help more of our military by providing them with cars and free technical support."
         },
         "help_page-15": {
