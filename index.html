@@ -212,9 +212,9 @@
 		<div class="donat__box">
 			<div data-tabs class="donat-tabs" id="donat">
 				<nav data-tabs-titles class="donat-tabs__navigation">
-					<button type="button" class="donat-tabs__title _tab-active" data-lang="home_page-43">Переказ карткою</button>
-					<button type="button" class="donat-tabs__title" data-lang="home_page-44">Mono банка</button>
-					<button type="button" class="donat-tabs__title" data-lang="home_page-45">Реквізити</button>
+					<button type="button" class="donat-tabs__title _tab-active" data-lang="home_page-43" name="переказ карткою">Переказ карткою</button>
+					<button type="button" class="donat-tabs__title" data-lang="home_page-44" name="mono банка">Mono банка</button>
+					<button type="button" class="donat-tabs__title" data-lang="home_page-45" name="реквізити">Реквізити</button>
 				</nav>
 				<h3 class="donat-title title" data-lang="home_page-46">Підтримати збір на авто для ЗСУ</h3>
 				<div data-tabs-body class="donat-tabs__content">
@@ -240,9 +240,9 @@
 											</div>
 										</div>
 										<div class="card-sum__btns">
-											<button type="button" class="card-sum__btn one-hundred">100 <span id="sum__btn-valuta">UAH</span></button>
-											<button type="button" class="card-sum__btn five-hundred">500 <span id="sum__btn-valuta">UAH</span></button>
-											<button type="button" class="card-sum__btn thousand">1000 <span id="sum__btn-valuta">UAH</span></button>
+											<button type="button" class="card-sum__btn one-hundred" name="sum 100">100 <span id="sum__btn-valuta">UAH</span></button>
+											<button type="button" class="card-sum__btn five-hundred" name="sum 500">500 <span id="sum__btn-valuta">UAH</span></button>
+											<button type="button" class="card-sum__btn thousand" name="sum 1000">1000 <span id="sum__btn-valuta">UAH</span></button>
 										</div>
 									</div>
 								</div>
@@ -256,13 +256,13 @@
 							</form>
 							<button type="button" class="tab__card-btn btn-blue" name="donat"><a data-lang="home_page-49" href="#">Підтримати</a><span class="_icon-arrowicon"></span></button>
 						</div>
-						<button type="button" class="tab__btn btn" id="subs"><a href="#" data-lang="home_page-50">Оформити підписку</a><span class="_icon-arrowicon"></span> </button>
+						<button type="button" class="tab__btn btn" id="subs" name="оформити підписку"><a href="#" data-lang="home_page-50">Оформити підписку</a><span class="_icon-arrowicon"></span> </button>
 					</div>
 
 					<div class="donat-tabs__body tab">
 						<div class="tab__card">
 							<div class="tab__card-sum">
-								<button type="button" class="tab__mono-btn btn"><a href="#" data-lang="home_page-51">Mono банка</a><span class="_icon-arrowicon"></span></button>
+								<button type="button" class="tab__mono-btn btn" name="mono банка"><a href="#" data-lang="home_page-51">Mono банка</a><span class="_icon-arrowicon"></span></button>
 							</div>
 							<form class="tab__card-mail">
 								<label for="input-email" class="tab__card-label">Email*</label>
@@ -273,7 +273,7 @@
 							</form>
 
 						</div>
-						<button type="button" class="tab__btn btn" id="subs"><a href="#" data-lang="home_page-53">Оформити підписку</a><span class="_icon-arrowicon"></span> </button>
+						<button type="button" class="tab__btn btn" id="subs" name="оформити підписку"><a href="#" data-lang="home_page-53">Оформити підписку</a><span class="_icon-arrowicon"></span> </button>
 					</div>
 
 					<div class="donat-tabs__body tab">
@@ -339,7 +339,7 @@
 					<input type="email" placeholder="peremoga@gmail.com" class="contact-item__input input" name="contact-item__email" id="contact-item__email">
 				</div>
 			</div>
-			<button type="button" class="contact-form__btn" data-modal data-lang="home_page-59">Надіслати</button>
+			<button type="button" class="contact-form__btn" data-modal data-lang="home_page-59" name="donat">Надіслати</button>
 		</form>
 	</section>
 
@@ -350,12 +350,12 @@
 				<div class="footer__form-text" data-lang="home_page-60">Залишай свою електронну пошту та отримуй звітність про діяльність фонду. Будь завжди в курсі !</div>
 				<form class="footer__form-input">
 					<input autocomplete="off" type="email" name="form-footer" data-error="Помилка" placeholder="Твій email" class="input">
-					<button type="button" class="footer__form-btn"><span class="_icon-arrowicon"></span></button>
+					<button type="button" class="footer__form-btn" name="donat"><span class="_icon-arrowicon"></span></button>
 				</form>
 			</div>
 			<div class="footer__content">
 				<div class="footer__logo">
-					<div class="footer__logo-img"><a href="index.html"><picture><source srcset="img/logo1.webp" type="image/webp"><img src="img/logo1.png" alt="логотип Волонтерський Рух України"></picture></a></div>
+					<div class="footer__logo-img"><a href="index.html"><img src="img/logo1.png" alt="логотип Волонтерський Рух України"></a></div>
 					<div class="footer__logo-text">Волонтерський Рух України</div>
 				</div>
 				<div class="footer__lists">
@@ -372,8 +372,8 @@
 					</ul>
 				</div>
 				<div class="footer__btns btn">
-					<button class="footer__btns-btn header__btns-btn--active" data-btn="ukr">UA</button>
-					<button class="footer__btns-btn" data-btn="en">EN</button>
+					<button class="footer__btns-btn header__btns-btn--active" data-btn="ukr" name="ukr">UA</button>
+					<button class="footer__btns-btn" data-btn="en" name="en">EN</button>
 				</div>
 			</div>
 			<button class="footer__btn-main btn" name="donat"><a data-lang="home_page-67" href="index.html#donat">Підтримати</a><span class="_icon-arrowicon"></span></button>
@@ -396,56 +396,10 @@
 		</div>
 	</div>
 
-
 	
 	<script src="js/app.js"></script>
 	<script src="js/slider.js"></script>
-<!---	<script>
-		
-		let sliderLeftBtn = document.querySelector('#slider-left');     
-	  	let left = 0;
-			
-	  	let slider = document.querySelector('.progress__wrapper');
-	  	let startX;
-	  	let endX;
-	
-	
-	  sliderLeftBtn.addEventListener('click', function() {            
-		left = left - 400;
-		  if (left < -800) {
-			left = 0;
-		  }
-			slider.style.left = left + 'px';            
-	   });
-	
-			slider.addEventListener('touchstart', e => {
-				console.log('touchstart', e.touches[0].clientX);
-				startX = e.touches[0].clientX;
-			})
-			slider.addEventListener('touchmove', e => {
-				console.log('touchmovet', e.touches[0].clientX);
-				endX = e.touches[0].clientX;
-			})
-	
-	
-			slider.addEventListener('touchend', e => {
-				if (startX > endX) {
-					left = left - 300;
-					if (left < -890) {
-						left = 0;
-					}
-					slider.style.left = left + 'px';   
-				} else {
-					left = left + 300;
-				if (left > 0) {
-					left = 0;
-				} 
-				slider.style.left = left + 'px';
-				}
-				
-			})	
-			
-	</script> --->
+
 </body>
 </html>
 
