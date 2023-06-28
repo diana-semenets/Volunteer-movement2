@@ -359,55 +359,7 @@ h6 {
   display: none;
 }
 
-/*
-.icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
-}
-*/
+/*-------------------------------------*/
 
 .header {
   z-index: 2;
@@ -670,6 +622,7 @@ h6 {
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
+  color: #4A4A4A; 
 }
 
 .footer__btn-main {
@@ -688,6 +641,10 @@ h6 {
   border: 1px solid #3C59F0;
   color: #3C59F0;
 }
+.footer__btns .header__btns-btn--active {
+  color: #fff;
+} 
+/*--------------------------------*/
 
 .main {
   background: -webkit-gradient(linear, left top, left bottom, from(#3C59F0), color-stop(68.13%, #A9B6F7), to(#FFE895));
