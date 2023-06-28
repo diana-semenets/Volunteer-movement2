@@ -691,8 +691,8 @@
             en: "Our partners"
         },
         "home_page-title": {
-            ukr: "Волонтерський Рух України",
-            en: "Volunteer Movement of Ukraine"
+            ukr: "Партнери - Волонтерський Рух України",
+            en: "Partners - Volunteer Movement of Ukraine"
         },
         "partners_page-2": {
             ukr: "Посилання на сайт",
@@ -904,9 +904,9 @@
             ukr: "Вакансії",
             en: "Vacansies"
         },
-        "home_page-title": {
-            ukr: "Волонтерський Рух України",
-            en: "Volunteer Movement of Ukraine"
+        "vacancy_page-title": {
+            ukr: "Вакансії - Волонтерський Рух України",
+            en: "Vacansies - Volunteer Movement of Ukraine"
         },
         "vacancy_page-2": {
             ukr: "Координатор юриста",
@@ -1059,8 +1059,8 @@
             en: "FAQ"
         },
         "home_page-title": {
-            ukr: "Волонтерський Рух України",
-            en: "Volunteer Movement of Ukraine"
+            ukr: "Запитання - Волонтерський Рух України",
+            en: "FAQ - Volunteer Movement of Ukraine"
         },
         "help_page-2": {
             ukr: "Кому допомагає фонд?",
