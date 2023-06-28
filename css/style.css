@@ -1172,9 +1172,7 @@ h6 {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 @supports (padding-left: clamp( 1.5rem , 0.4090909091rem  +  5.4545454545vw , 4.5rem )) {
@@ -1244,11 +1242,12 @@ h6 {
 .why__title {
   max-width: 636px;
 }
-
+.why__text-container {
+  grid-row: span 2;
+}
 .why__text {
   max-width: 526px;
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
+  
 }
 
 .why__btn {
@@ -2839,7 +2838,9 @@ h6 {
     font-size: 16px;
     line-height: 24px;
   }
-
+  .why__text:last-child {
+    margin-top: 0;
+  }
   .why__btn {
     height: inherit;
     margin: 40px 0;
