@@ -157,6 +157,7 @@
         }
     }
 
+//-----------------------tabs-----------------------------
 
     function tabs() {
         const tabs = document.querySelectorAll("[data-tabs]");
@@ -328,7 +329,7 @@
         if (e.code === "Escape" && modal.classList.contains("show")) closeMode();
     }));
 
-
+//---------------Valuta---------------------------
 
     const btnValuta = document.querySelector(".sum__input-title");
     const bthArrowValuta = document.querySelector(".sum__input-icon");
@@ -388,6 +389,9 @@
         sumDonat.value = thousand;
     }));
 
+    
+    
+
 /*------------langs----------------*/
 
     const langButtons = document.querySelectorAll("[data-btn]");
@@ -396,6 +400,10 @@
     let currentLang = localStorage.getItem("language") || checkBrowserLang() || "ukr";
     let currentTexts = {};
     const homeTexts = {
+        "home_page-title": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
         "home_page-1": {
             ukr: "авто для зсу",
             en: "Cars for armed forces"
@@ -682,6 +690,10 @@
             ukr: "Наші партнери",
             en: "Our partners"
         },
+        "home_page-title": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
         "partners_page-2": {
             ukr: "Посилання на сайт",
             en: "website"
@@ -892,6 +904,10 @@
             ukr: "Вакансії",
             en: "Vacansies"
         },
+        "home_page-title": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
         "vacancy_page-2": {
             ukr: "Координатор юриста",
             en: "Lawyer coordinator"
@@ -1041,6 +1057,10 @@
         "help_page-1": {
             ukr: "Часті запитання",
             en: "FAQ"
+        },
+        "home_page-title": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
         },
         "help_page-2": {
             ukr: "Кому допомагає фонд?",
@@ -1231,6 +1251,7 @@
 
           case "/partners.html":
             currentTexts = partnersTexts;
+
             break;
 
           case "/vacancy.html":
@@ -1264,7 +1285,10 @@
                 changeLang();
             }
         }));
-    }));
+    }));  
+
+   
+
     function resetActiveClass(arr, activeClass) {
         arr.forEach((elem => {
             elem.classList.remove(activeClass);
@@ -1293,8 +1317,40 @@
     }
     console.log("navigator.language", checkBrowserLang());
 
+  
+    /*-----------copy-------------------*/
 
-   
+    function copy () {
+        const textToCopyOne = document.querySelector('#copy-text-one');
+        const copyBtn = document.querySelector('#copy-one'); 
+        const textToCopySecond = document.querySelector('#copy-text-second');
+        const copyBtnSecond = document.querySelector('#copy-second'); 
+        const textToCopyThird = document.querySelector('#copy-text-third');
+        const copyBtnThird = document.querySelector('#copy-third'); 
+        const textToCopyFourth = document.querySelector('#copy-text-fourth');
+        const copyBtnFourth = document.querySelector('#copy-fourth');
+
+
+        copyBtn.addEventListener('click', function copyTextOne () {         
+            navigator.clipboard.writeText(textToCopyOne.innerText);
+        });
+
+        copyBtnSecond.addEventListener('click', function copyTextSecond () {         
+            navigator.clipboard.writeText(textToCopySecond.innerText);
+        });
+
+        copyBtnThird.addEventListener('click', function copyTextThird () {         
+            navigator.clipboard.writeText(textToCopyThird.innerText);
+        });
+        copyBtnFourth.addEventListener('click', function copyTextFourth () {         
+            navigator.clipboard.writeText(textToCopyFourth.innerText);
+        });
+    };
+
+
+    /*------------------------------*/
+
+    copy();     
     spollers();
     tabs();
 })();

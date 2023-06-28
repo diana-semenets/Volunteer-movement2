@@ -1844,6 +1844,7 @@ h6 {
 
 ._icon-copy {
   margin-left: 40px;
+  cursor: pointer;
 }
 
 ._tab-active {
