@@ -118,6 +118,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #F6F6FC;
 }
 
 input,
@@ -185,6 +186,7 @@ h6 {
           */
   overflow: hidden; 
   width: 100%;
+  
 }
 
 /*  .wrapper > main {
@@ -931,8 +933,6 @@ h6 {
   display: -ms-grid;
   display: grid;
   gap: 24px;
-/*  -ms-grid-columns: (minmax(200px, 636px))[2]; */
-  /*grid-template-columns: repeat(2, minmax(300px, 636px)); */
   grid-template-columns: repeat(2, minmax(250px, 636px));
   border-bottom: 1px solid #4A4A4A;
 }
@@ -1122,7 +1122,9 @@ h6 {
       -ms-transform: scale(1.02);
           transform: scale(1.02);
 }
-
+.why {
+  
+}
 .why__box {
   max-width: 1440px;
   margin: 0 auto;
@@ -1321,19 +1323,19 @@ h6 {
 }
 
 .items-item-btn {
-  padding: 54px 26px 26px 40px;
+  background-color: #fff;
   border: 1px solid #1A1A1A;
   border-radius: 24px;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
-  text-align: start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+          align-items: end;
   -webkit-transition: all ease 0.3s; 
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
@@ -1347,8 +1349,16 @@ h6 {
 
 .items-item-btn a {
   width: 100%;
+  height: 100%;
+  padding: 0 0 26px 40px;
+  text-align: start;
+  display: grid;
+  align-content: end;  
 }
-
+.items-item-arrow {
+  padding: 0 40px 26px 0;
+  pointer-events: none;
+}
 .progress__box {
   max-width: 1440px;
   margin: 0 auto;
@@ -2563,7 +2573,9 @@ h6 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-
+  .btn-blue {
+    height: 56px;
+  }
   .main__content {
     display: block;
   }
@@ -2585,6 +2597,8 @@ h6 {
   .main__info-text {
     margin-top: 33px;
     margin-bottom: 33px;
+    font-size: 16px;
+    line-height: 29px; 
   }
 
   .info__box {
@@ -2616,7 +2630,9 @@ h6 {
         -ms-flex: 0 100%;
             flex: 0 100%;
   }
-
+  .items-item__number {
+    font-size: 24px;
+  }
   .items-item {
     display: block;
   }
@@ -2629,10 +2645,14 @@ h6 {
 
   .items-item-btn {
     width: 100%;
-    padding: 26px 26px 26px 40px;
+    border-radius: 72px; 
   }
   .items-item-btn a {
+    padding: 16px 0 16px 24px;
     font-size: 16px;
+  }
+  .items-item-arrow {
+    padding: 16px 24px 16px 0;
   }
   .donat-tabs__navigation {
     -ms-grid-columns: 1fr;
@@ -2840,11 +2860,12 @@ h6 {
   }
 
   .why__img{
-      background-image: url("../img/why-back.png"); }
+      background-image: url("../img/why-back.png"); 
+    }
   .why__img {
     width: auto;
     height: 378px;
-    margin: 0 24px;
+    margin: 0 6px;
     background-size: 100%;
     background-repeat: no-repeat;
   }
@@ -2859,7 +2880,7 @@ h6 {
   }
 
   .items-item-btn {
-    padding: 16px 24px;
+    
   }
 
   .progress__slider {
