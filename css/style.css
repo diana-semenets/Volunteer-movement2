@@ -278,6 +278,7 @@ h6 {
 
 .btn-blue {
   width: 100%;
+  height: 80px;
   padding: 20px 40px;
   border-radius: 72px;
   display: -webkit-box;
@@ -1127,8 +1128,7 @@ h6 {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 1fr;
   justify-content: space-between;
 }
 
@@ -1180,13 +1180,13 @@ h6 {
   }
 }
 
-@supports ((-moz-column-gap: clamp( 1.25rem , -1.3409090909rem  +  12.9545454545vw , 8.375rem )) or (column-gap: clamp( 1.25rem , -1.3409090909rem  +  12.9545454545vw , 8.375rem ))) {
+/*@supports ((-moz-column-gap: clamp( 1.25rem , -1.3409090909rem  +  12.9545454545vw , 8.375rem )) or (column-gap: clamp( 1.25rem , -1.3409090909rem  +  12.9545454545vw , 8.375rem ))) {
   .why__box {
     -webkit-column-gap: clamp( 1.25rem , -1.3409090909rem  +  12.9545454545vw , 8.375rem );
        -moz-column-gap: clamp( 1.25rem , -1.3409090909rem  +  12.9545454545vw , 8.375rem );
             column-gap: clamp( 1.25rem , -1.3409090909rem  +  12.9545454545vw , 8.375rem );
   }
-}
+} */
 
 @supports not ((-moz-column-gap: clamp( 1.25rem , -1.3409090909rem  +  12.9545454545vw , 8.375rem )) or (column-gap: clamp( 1.25rem , -1.3409090909rem  +  12.9545454545vw , 8.375rem ))) {
   .why__box {
@@ -1201,6 +1201,7 @@ h6 {
 }
 .why__text-container {
   grid-row: span 2;
+  justify-self: right;
 }
 .why__text {
   max-width: 526px;
@@ -1209,6 +1210,7 @@ h6 {
 
 .why__btn {
   height: 80px;
+  margin-top: 84px;
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
   align-self: end;
@@ -1537,7 +1539,9 @@ h6 {
   font-weight: 600;
   font-size: 24px;
 }
-
+.donat-tabs__title:hover {
+  border-color: #fff;
+}
 .tab {
   margin-top: 80px;
 }
@@ -3091,7 +3095,6 @@ h6 {
   background-image: url('../img/skoda_logo.webp');
  }
 
-@media (max-width: 29.99875em){
-
+@media (max-width: 29.99875em){я
   .why__img{ background-image: url('../img/why-back.webp'); }
 }

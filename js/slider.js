@@ -8,7 +8,7 @@ let endX;
 	
 	sliderLeftBtn.addEventListener('click', function() {            
 		left = left - 400;
-		  if (left < -800) {
+		  if (left < -1600) {
 			left = 0;
 		  }
 			slider.style.left = left + 'px';            
@@ -27,7 +27,7 @@ let endX;
 	slider.addEventListener('touchend', e => {
 		if (startX > endX) {
 			left = left - 300;
-			if (left < -890) {
+			if (left < -1300) {
 				left = 0;
 			}
 			slider.style.left = left + 'px';   
