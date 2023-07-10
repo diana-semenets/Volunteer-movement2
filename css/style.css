@@ -2245,6 +2245,15 @@ h6 {
   top: 0;
   left: 0;
 }
+.vacancy__item:hover .partner__item-hyundai::before {
+  content: "";
+  background-image: url("../img/Hyundai-hover.png");
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .partner__item-renault {
   padding-left: 46px;
@@ -2254,6 +2263,15 @@ h6 {
 .partner__item-renault::before {
   content: "";
   background-image: url("../img/renault.svg");
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.vacancy__item:hover .partner__item-renault::before {
+  content: "";
+  background-image: url("../img/renault-hover.png");
   width: 30px;
   height: 40px;
   position: absolute;
@@ -2282,8 +2300,19 @@ h6 {
 }
 
 .no-webp .partner__item-ford::before{
-  background-image: url("../img/ford-logo.png"); }
-
+  background-image: url("../img/ford-logo.png");
+}
+.vacancy__item:hover .partner__item-ford::before {
+  content: "";
+  background-image: url("../img/ford-hover.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 94px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .partner__item-ford::before {
   content: "";
   width: 94px;
