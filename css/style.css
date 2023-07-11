@@ -2439,7 +2439,7 @@ h6 {
 
 .help__items-item {
   margin-bottom: 24px;
-  padding: 40px 40px 46px;
+  
   background-color: #fff;
   border: 1px solid #000000;
   border-radius: 16px;
@@ -2462,8 +2462,9 @@ h6 {
 }
 
 .help__item-title {
-  width: 100%;
-  margin-bottom: 40px;
+  width: 100%;  
+  height: 164px;
+  
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2477,8 +2478,9 @@ h6 {
   font-size: 32px;
   line-height: 39px;
   text-align: start;
+  padding: 40px 40px 46px;
+  border-radius: 16px;
 }
-
 .help__item-title p {
   max-width: 485px;
 }
@@ -2487,6 +2489,7 @@ h6 {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
+  padding: 0 40px 40px 40px;
 }
 
 .help__item-text {
@@ -2501,6 +2504,7 @@ h6 {
 
 ._spoller-active {
   color: #3C59F0;
+  height: inherit;
 }
 
 ._spoller-active span {
@@ -2715,6 +2719,12 @@ h6 {
 
   .help__items-item {
     padding: 22px 16px 25px;
+  }
+  .help__item-title {
+    padding: 0;
+  }
+  .help__item-info {
+    padding: 40px 0 0 0;
   }
 }
 
@@ -3126,14 +3136,20 @@ h6 {
   .vacancy__content {
     display: block;
   }
-
+  .help__items-item {
+    
+  }
   .help__item-title {
     font-size: 16px;
+    height: 67px;
   }
 
   .help__item-info {
     font-size: 14px;
     line-height: 22px;
+  }
+  .help__item-info {
+    padding-top: 0;
   }
 }
 
