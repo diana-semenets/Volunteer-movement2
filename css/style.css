@@ -171,6 +171,10 @@ h6 {
       touch-action: none;
 }
 
+.tab__card-mail input, .footer__form-input input{
+  outline: none;
+}
+
 /*---------------------------*/
 
 .wrapper {
@@ -309,6 +313,7 @@ h6 {
   width: 100%;
   text-align: left;
   font-weight: 600;
+  font-size: 24px;
   display: block;
 }
 
@@ -943,6 +948,7 @@ h6 {
 }
 
 .partners__list-btn {
+  height: 80px;
   padding: 20px 40px;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
@@ -2579,6 +2585,9 @@ h6 {
   }
   .btn-blue {
     height: 56px;
+  }
+  .btn-blue a {
+    font-size: 16px;
   }
   .main__content {
     display: block;
