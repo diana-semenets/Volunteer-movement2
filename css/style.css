@@ -2747,15 +2747,12 @@ h6 {
     -ms-grid-columns: 20% 50% 30%;
     grid-template-columns: 20% 50% 30%;
   }
-
   .avto {
     display: none;
   }
-
   .header__nav {
     margin-right: 15px;
   }
-
   .header__nav-item {
     padding: 12px 16px;
     background: #1A1A1A;
@@ -2790,17 +2787,25 @@ h6 {
   }
 
   .footer__form-input input {
+    height: 56px;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    padding: 12px 24px;
+    padding: 14px 24px;
   }
-
+  ._icon-arrowicon::before {
+    margin-top: 5px;
+  }
   .footer__content {
     display: block;
     margin-bottom: 44px;
+    position: relative;
   }
-
+  .footer__btns {
+    position: absolute;
+    bottom: 170px;
+    right: 0;
+  }
   .footer__logo {
     margin-bottom: 55px;
   }
@@ -2814,7 +2819,12 @@ h6 {
   .footer__form-btn {
     top: 8px;
   }
-
+  .footer__list {
+    flex: 100%;
+  }
+  .footer__list:last-child {
+    margin-top: 46px;
+  }
   .title {
     line-height: 44px;
   }
@@ -2980,7 +2990,9 @@ h6 {
   }
 
   .card-mail input {
+    height: 56px;
     padding: 12px 24px;
+    font-size: 14px;
   }
 
   .card-mail-text {
