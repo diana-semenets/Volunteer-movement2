@@ -2888,9 +2888,21 @@ h6 {
   .join__box {
     margin-top: -300px;
   }
-
-  .items-item-btn {
-    
+  .item-list {
+    height: 181px;
+    padding: 24px 0 24px 24px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .partners__list-btn {
+    height: 56px;
+    padding: 16px 24px; 
+  }
+  .partners__list-btn a {
+    font-size: 16px;
+  }
+  .item-list-title {
+    font-size: 16px;
   }
 
   .progress__slider {
@@ -2920,9 +2932,13 @@ h6 {
     font-size: 16px;
     line-height: 20px;
   }
-
+  .donat__box {
+    padding-top: 209px;
+    position: relative;
+  }
   .donat-title {
-    margin-top: 64px;
+    position: absolute;
+    top: 64px;
   }
 
   .tab__card {
@@ -3007,8 +3023,8 @@ h6 {
   }
 
   .contact-form {
-    padding-left: 9px;
-    padding-right: 9px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .contact-form__box {
