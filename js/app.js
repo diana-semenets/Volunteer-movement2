@@ -1350,44 +1350,65 @@
 
     /*------------forms----------------*/
 
-    const forms = document.querySelectorAll('form');
+    const form = document.querySelectorAll('form'),
+    inputs = document.querySelectorAll('input'),
+
+
+
+    phoneInputs = document.querySelectorAll('input[name="contact-item__tel"]');
+
+    phoneInputs.forEach(item => {
+        item.addEventListener('input', () => {
+            item.value = item.value.replace(/\D/, '');
+        });
+    });
 
     const message = {
-        loading: "в процесі",
-        failure: 'помилка'
-    }
+        loading: 'Завантаження...',
+        success: 'Дякуємо, очікуйте на відповідь',
+        failure: 'Помилка...'
+    };
 
-    forms.forEach(item => {
-        postData(item);
-    })
+    const postData = async (url, data) => {
+        document.querySelector('.status').textContent = message.loading;
+        let res = await fetch(url, {
+        method: "POST",
+        body: data
+    });
 
-    function postData(form) {
-        form.addEventListener('submit', (e) => {
+    return await res.text();
+    };
+
+    const clearInputs = () => {
+        inputs.forEach(item => {
+        item.value = '';
+        });
+    };
+
+    form.forEach(item => {
+        item.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const statusMessage = document.createElement('div');
+            let statusMessage = document.createElement('div');
             statusMessage.classList.add('status');
-            statusMessage.textContent = message.loading;
-            form.append(statusMessage);
+            item.appendChild(statusMessage);
 
-            const request = new XMLHttpRequest();
-            request.open('POST', 'server.php');
+            const formData = new FormData(item);
 
-            request.setRequestHeader('Content-type', 'multipart/form-data');
-            const formData = new FormData(form);
-
-            request.send(formData);
-
-            request.addEventListener('load', () => {
-                if ( request.status === 200 ) {
-                    console.log(request.response);
-                    //statusMessage.textContent = message.loading;
-                } else {
-                    statusMessage.textContent = message.failure;
-                }
-            })
-        })
-    }
+            postData('server.php', formData)
+                .then(res => {
+                    console.log(res);
+                    statusMessage.textContent = message.success;
+                })
+                .catch(() => statusMessage.textContent = message.failure)
+                .finally(() => {
+                    clearInputs();
+                    setTimeout(() => {
+                        statusMessage.remove();
+                    }, 5000);
+                });
+            });
+    });
 
 
 /*----------------------------*/
