@@ -404,6 +404,14 @@
             ukr: "Волонтерський Рух України",
             en: "Volunteer Movement of Ukraine"
         },
+        "home_page-logo": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
+        "footer_page-logo": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
         "home_page-1": {
             ukr: "авто для зсу",
             en: "Cars for armed forces"
@@ -690,6 +698,14 @@
             ukr: "Наші партнери",
             en: "Our partners"
         },
+        "home_page-logo": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
+        "footer_page-logo": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
         "home_page-title": {
             ukr: "Партнери - Волонтерський Рух України",
             en: "Partners - Volunteer Movement of Ukraine"
@@ -908,6 +924,14 @@
             ukr: "Вакансії - Волонтерський Рух України",
             en: "Vacansies - Volunteer Movement of Ukraine"
         },
+        "home_page-logo": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
+        "footer_page-logo": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
         "vacancy_page-2": {
             ukr: "Координатор юриста",
             en: "Lawyer coordinator"
@@ -1061,6 +1085,14 @@
         "home_page-title": {
             ukr: "Запитання - Волонтерський Рух України",
             en: "FAQ - Volunteer Movement of Ukraine"
+        },
+        "home_page-logo": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
+        },
+        "footer_page-logo": {
+            ukr: "Волонтерський Рух України",
+            en: "Volunteer Movement of Ukraine"
         },
         "help_page-2": {
             ukr: "Кому допомагає фонд?",
