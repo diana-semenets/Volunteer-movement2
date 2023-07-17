@@ -132,116 +132,56 @@
 
 			<section class="donat">
 				<div class="donat__box">
-					<div data-tabs class="donat-tabs" id="donat">
-						<div class="donat__grid">
-							<nav data-tabs-titles class="donat-tabs__navigation">
-							<button type="button" class="donat-tabs__title _tab-active" data-lang="home_page-43" name="переказ карткою">Переказ карткою</button>
-							<button type="button" class="donat-tabs__title" data-lang="home_page-44" name="mono банка">Mono банка</button>
-							<button type="button" class="donat-tabs__title" data-lang="home_page-45" name="реквізити">Реквізити</button>
-							</nav>
-							<h3 class="donat-title title" data-lang="home_page-46">Підтримати збір на авто для ЗСУ</h3>
-						</div>
-						<div data-tabs-body class="donat-tabs__content">
-							<div class="donat-tabs__body tab">
-								<div class="tab__card">
-									<div class="tab__card-sum">
-										<div class="card-sum">
-											<label for="sum-donat" class="tab__card-label" data-lang="home_page-47">Сума внеску</label>
-											<div class="card-sum__donat">
-												<div class="card-sum__input">
-													<input type="text" placeholder="0" class="input" id="sum-donat" name="sum-donat">
-													<div class="sum__input form-group">
-														<div class="dropdown">
-															<button class="sum__input-title btn dropdown__button" name="uah">UAH </button>
-															<span class="_icon-chevron-down sum__input-icon"></span>
-															<ul class="sum__valuta hidden">
-																<li class="sum__valuta-item dropdown__list-item" data-value="uah">UAH</li>
-																<li class="sum__valuta-item dropdown__list-item" data-value="usd">USD</li>
-																<li class="sum__valuta-item dropdown__list-item" data-value="eur">EUR</li>
-															</ul>
-															<input type="text" name="select-category" value="" class="dropdown__item-hidden">
-														</div>
-													</div>
-												</div>
-												<div class="card-sum__btns">
-													<button type="button" class="card-sum__btn one-hundred" name="100">100 <span id="sum__btn-valuta">UAH</span></button>
-													<button type="button" class="card-sum__btn five-hundred" name="500">500 <span id="sum__btn-valuta">UAH</span></button>
-													<button type="button" class="card-sum__btn thousand" name="1000">1000 <span id="sum__btn-valuta">UAH</span></button>
-												</div>
-											</div>
-										</div>
+					<h3 class="donat-title title" data-lang="home_page-46">Підтримати збір на авто для ЗСУ</h3>
+					<div class="donat__content">
+						<form class="tab__card-mail">
+							<label for="input-email" class="tab__card-label">Email*</label>
+							<div class="card-mail">
+								<input required type="email" class="input" placeholder="Введіть ваш email" id="input-email1" name="input-email">
+								<button type="button" class="donat__btn btn-blue" name="donat"><a data-lang="home_page-49" href="#">Підтримати</a><span class="_icon-arrowicon"></span></button>						
+							</div>
+							<p class="card-mail-text" data-lang="home_page-48">Ви будете отримувати звітності на email по вашому внеску</p>
+						</form>
+						<button type="button" class="tab__card-btn btn" name="card pay"><a href="https://payhub.com.ua/#/payment/movement-of-ukraine" data-lang="home_page-43" target="_blank">Переказ карткою</a><span class="_icon-arrowicon"></span></button>
+						<button type="button" class="tab__mono-btn btn" name="mono банка"><a href="https://send.monobank.ua/jar/6asNjXLZXx" data-lang="home_page-51" target="_blank">Mono банка</a><span class="_icon-arrowicon"></span></button>
+						
+						<div class="tab__card invoice">
+							<div class="invoice-title" data-lang="home_page-54">Реквізити в Україні</div>
+							<ul class="invoice-list list">
+								<li class="list-item"><span class="list-item-title">Отримувач: </span>Благодійний фонд «Волонтерський Рух україни» </li>
+								<li class="list-item"><span class="list-item-title">Адреса отримувача: </span>Одеса 65039, пр.Гагаріна, 12а, офіс 110</li>
+								<li class="list-item"><span class="list-item-title">ЄДРПОУ: </span> 45019226</li>
+								<li class="list-item"><span class="list-item-title">IBAN UAH:</span></li>
+								<li class="list-item">
+									<span class="list-item-title bank">АТ КБ «ПРИВАТБАНК»</span>
+									<div class="list-item-text" ><span id="copy-text-one"> UA633052990000026005014933699</span><span class="_icon-copy" id="copy-one"></span></div>
+								</li>
+								<li class="list-item">
+									<span class="list-item-title bank">АТ «Універсал банк»</span>
+									<div class="list-item-text"><span id="copy-text-second">UA103220010000026004170000618 </span><span class="_icon-copy" id="copy-second"></span></div>
+								</li>
+								<li class="list-item">
+									<span class="list-item-title bank">АТ «ПУМБ»</span>
+									<div class="list-item-text"><span id="copy-text-third">UA873348510000000026000204673</span><span class="_icon-copy" id="copy-third"></span>
 									</div>
-									<form class="tab__card-mail">
-										<label for="input-email" class="tab__card-label">Email*</label>
-										<div class="card-mail">
-											<input required type="email" class="input" placeholder="Введіть ваш email" id="input-email" name="input-email">
-											<p class="card-mail-text" data-lang="home_page-48">Вам надійде квитанція на email та ви будете отримувати звітності по вашому внеску</p>
-										</div>
-									</form>
-									<button type="button" class="tab__card-btn btn-blue" name="donat"><a data-lang="home_page-49" href="#">Підтримати</a><span class="_icon-arrowicon"></span></button>
-								</div>
-								<button type="button" class="tab__btn btn" id="subs" name="оформити підписку"><a href="#" data-lang="home_page-50">Оформити підписку</a><span class="_icon-arrowicon"></span> </button>
-							</div>
-
-							<div class="donat-tabs__body tab">
-								<div class="tab__card">
-									<div class="tab__card-sum">
-										<button type="button" class="tab__mono-btn btn" name="mono банка"><a href="https://send.monobank.ua/jar/6asNjXLZXx" data-lang="home_page-51">Mono банка</a><span class="_icon-arrowicon"></span></button>
-									</div>
-									<form class="tab__card-mail">
-										<label for="input-email" class="tab__card-label">Email*</label>
-										<div class="card-mail">
-											<input required type="email" class="input" placeholder="Введіть ваш email" id="input-email" name="input-email">
-											<p class="card-mail-text" data-lang="home_page-52">Вам надійде квитанція на email та ви будете отримувати звітності по вашому внеску</p>
-										</div>
-									</form>
-
-								</div>
-								<button type="button" class="tab__btn btn" id="subs" name="оформити підписку"><a href="#" data-lang="home_page-53">Оформити підписку</a><span class="_icon-arrowicon"></span> </button>
-							</div>
-
-							<div class="donat-tabs__body tab">
-								<div class="tab__card invoice">
-									<div class="invoice-title" data-lang="home_page-54">Реквізити в Україні</div>
-									<ul class="invoice-list list">
-										<li class="list-item"><span class="list-item-title">Отримувач: </span>Благодійний фонд «Волонтерський Рух україни» </li>
-										<li class="list-item"><span class="list-item-title">Адреса отримувача: </span>Одеса 65039, пр.Гагаріна, 12а, офіс 110</li>
-										<li class="list-item"><span class="list-item-title">ЄДРПОУ: </span> 45019226</li>
-										<li class="list-item"><span class="list-item-title">IBAN UAH:</span></li>
-										<li class="list-item">
-											<span class="list-item-title bank">АТ КБ «ПРИВАТБАНК»</span>
-											<div class="list-item-text" ><span id="copy-text-one"> UA633052990000026005014933699</span><span class="_icon-copy" id="copy-one"></span></div>
-										</li>
-										<li class="list-item">
-											<span class="list-item-title bank">АТ «Універсал банк»</span>
-											<div class="list-item-text"><span id="copy-text-second">UA103220010000026004170000618 </span><span class="_icon-copy" id="copy-second"></span></div>
-										</li>
-										<li class="list-item">
-											<span class="list-item-title bank">АТ «ПУМБ»</span>
-											<div class="list-item-text"><span id="copy-text-third">UA873348510000000026000204673</span><span class="_icon-copy" id="copy-third"></span>
-											</div>
-										</li>
-									</ul>
-								</div>
-		
-								<div class="tab__card invoice">
-									<div class="invoice-title" data-lang="home_page-55">Перекази в іноземній валюті</div>
-									<ul class="invoice-list list">
-										<li class="list-item"><span class="list-item-title">Account holder: </span> CHARITABLE FUND "VOLUNTEER MOVEMENT OF UKRAINE" </li>
-										<li class="list-item"><span class="list-item-title">Account holder address: </span> 110 office,12А Gagarina avenue, Odesa, 65039, Ukraine</li>
-										<li class="list-item">
-											<span class="list-item-title">IBAN: </span>
-											<div class="list-item-text"> <span id="copy-text-fourth">UA443052990000026006034918626 </span><span class="_icon-copy" id="copy-fourth"></span></div>
-										</li>
-										<li class="list-item"><span class="list-item-title">Bank name: </span>JSC CB "PRIVATBANK"</li>
-										<li class="list-item"><span class="list-item-title">Bank address: </span>1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE</li>
-										<li class="list-item"><span class="list-item-title">SWIFT: </span>PBANUA2X</li>
-									</ul>
-								</div>
-		
-							</div>
+								</li>
+							</ul>
 						</div>
-					</div>
+						<div class="tab__card invoice">
+							<div class="invoice-title" data-lang="home_page-55">Перекази в іноземній валюті</div>
+							<ul class="invoice-list list">
+								<li class="list-item"><span class="list-item-title">Account holder: </span> CHARITABLE FUND "VOLUNTEER MOVEMENT OF UKRAINE" </li>
+								<li class="list-item"><span class="list-item-title">Account holder address: </span> 110 office,12А Gagarina avenue, Odesa, 65039, Ukraine</li>
+								<li class="list-item">
+									<span class="list-item-title">IBAN: </span>
+									<div class="list-item-text"> <span id="copy-text-fourth">UA443052990000026006034918626 </span><span class="_icon-copy" id="copy-fourth"></span></div>
+								</li>
+								<li class="list-item"><span class="list-item-title">Bank name: </span>JSC CB "PRIVATBANK"</li>
+								<li class="list-item"><span class="list-item-title">Bank address: </span>1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE</li>
+								<li class="list-item"><span class="list-item-title">SWIFT: </span>PBANUA2X</li>
+							</ul>
+						</div>			
+					</div>		
 				</div>
 			</section>
 
