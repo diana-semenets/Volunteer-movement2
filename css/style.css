@@ -1580,6 +1580,10 @@ h6 {
   border: 1px solid #4A4A4A;
   border-radius: 24px;
 }
+.donat__btns {
+  display: flex;
+  flex-wrap: wrap;
+}
 .invoice {
   margin-bottom: 40px;
 }
@@ -1777,7 +1781,6 @@ h6 {
 .hide {
   display: none;
 }
-
 
 .header-page {
   z-index: 2;
@@ -2468,12 +2471,12 @@ h6 {
  /* .donat-tabs__navigation {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-  }
+  } */
 
   .donat-tabs__title {
     width: 100%;
     margin-bottom: 24px;
-  } */
+  } 
 
   .card-mail {
     -ms-flex-wrap: wrap;
@@ -2747,27 +2750,77 @@ h6 {
   .progress__btn {
     border: none;
   }
-
-/*  .donat-tabs__navigation {
-    gap: 12px;
+  .donat__box {
+    padding-bottom: 0;
   }
-
+  .donat__content {
+    margin-top: 41px;    
+    
+    padding: 28px 10px 0;
+  }
   .donat-tabs__title {
     margin-bottom: 0;
     padding: 18px 24px;
     font-size: 16px;
     line-height: 20px;
-  } */
+  } 
  
   .donat-title {  
     margin-bottom: 40px;
   }
- /* .donat__grid {    
+  
+  .card-mail input {
+    height: 56px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .card-mail-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .tab__card-btn a, .tab__mono-btn a {
+    font-size: 16px;
+    font-weight: 600; 
+  }
+  .tab__mono-btn, .tab__card-btn {
+    height: 56px;
+    padding: 20px 30px;
+    font-size: 20px;
+  }
+  .tab__card-btn {
+    margin-top: 16px;
+  }
+  .tab__mono-btn {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  .invoice {
+    margin-bottom: 16px;
+  }
+  .invoice-title {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .list-item {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .donat__btns {
     flex-wrap: wrap-reverse;
   }
   .tab__card {
-    padding: 28px 16px;
+    padding: 28px 10px;
   }
+  ._icon-copy {
+    margin-left: 20px;  
+  }
+ /* .donat__grid {    
+    flex-wrap: wrap-reverse;
+  }
+  
 
   .card-sum input {
     width: 100%;
@@ -2803,16 +2856,7 @@ h6 {
     font-size: 18px;
   }
 
-  .card-mail input {
-    height: 56px;
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-
-  .card-mail-text {
-    font-size: 12px;
-    line-height: 15px;
-  }
+  
 
   .tab__card-btn {
     padding: 16px 24px;
@@ -2826,22 +2870,9 @@ h6 {
     line-height: 20px;
   }
 
-  .tab__mono-btn {
-    padding: 20px 30px;
-    font-size: 20px;
-  }
+  
 
-  .invoice-title {
-    margin-top: 24px;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .list-item {
-    margin-bottom: 12px;
-    font-size: 14px;
-    line-height: 18px;
-  }
+  
 
   .sum__input-icon {
     top: 20px;
