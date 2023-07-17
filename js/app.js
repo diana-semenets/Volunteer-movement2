@@ -329,7 +329,7 @@
         if (e.code === "Escape" && modal.classList.contains("show")) closeMode();
     }));
 
-//---------------Valuta---------------------------
+/*---------------Valuta---------------------------
 
     const btnValuta = document.querySelector(".sum__input-title");
     const bthArrowValuta = document.querySelector(".sum__input-icon");
@@ -356,12 +356,12 @@
             listValuta.classList.add("hidden");
             bthArrowValuta.classList.remove("arrow-open");
 
-            /*----валюта на баттонах---------*/
+           ----валюта на баттонах---------
             
             sumBtnValuta.forEach((item) => {
                 item.innerHTML = this.dataset.value;
             })
-            /*------------------------------*/
+            
         }));
     }));
     document.addEventListener("click", (function(e) {
@@ -390,7 +390,7 @@
     }));
 
     
-    
+   */ 
 
 /*------------langs----------------*/
 
@@ -601,8 +601,8 @@
             en: "Contribution amount"
         },
         "home_page-48": {
-            ukr: "Вам надійде квитанція на email та ви будете отримувати звітності по вашому внеску",
-            en: "You will receive a receipt by email and you will receive reports on your contribution"
+            ukr: "Ви будете отримувати звітності на email по вашому внеску",
+            en: "You will receive reports on your contribution"
         },
         "home_page-49": {
             ukr: "Підтримати",
@@ -823,8 +823,8 @@
             en: "Contribution amount"
         },
         "home_page-48": {
-            ukr: "Вам надійде квитанція на email та ви будете отримувати звітності по вашому внеску",
-            en: "You will receive a receipt by email and you will receive reports on your contribution"
+            ukr: "Ви будете отримувати звітності на email по вашому внеску",
+            en: "You will receive reports on your contribution"
         },
         "home_page-49": {
             ukr: "Підтримати",
@@ -985,8 +985,8 @@
             en: "Contribution amount"
         },
         "home_page-48": {
-            ukr: "Вам надійде квитанція на email та ви будете отримувати звітності по вашому внеску",
-            en: "You will receive a receipt by email and you will receive reports on your contribution"
+            ukr: "Ви будете отримувати звітності на email по вашому внеску",
+            en: "You will receive reports on your contribution"
         },
         "home_page-49": {
             ukr: "Підтримати",
@@ -1183,8 +1183,8 @@
             en: "Contribution amount"
         },
         "home_page-48": {
-            ukr: "Вам надійде квитанція на email та ви будете отримувати звітності по вашому внеску",
-            en: "You will receive a receipt by email and you will receive reports on your contribution"
+            ukr: "Ви будете отримувати звітності на email по вашому внеску",
+            en: "You will receive reports on your contribution",
         },
         "home_page-49": {
             ukr: "Підтримати",
