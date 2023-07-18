@@ -314,6 +314,7 @@
     const modalTrigger = document.querySelectorAll("[data-modal]"), 
     modal = document.querySelector(".modal"), 
     modalCloseBtn = document.querySelector("[data-close]");
+    const modalLink = document.querySelector('.modal__btn');
 
     modalTrigger.forEach((btn => {
         btn.addEventListener("click", (() => {
@@ -328,41 +329,13 @@
         document.body.style.overflow = "";
     }
     modalCloseBtn.addEventListener("click", closeMode);
+    modalLink.addEventListener("click", closeMode);
     modal.addEventListener("click", (e => {
         if (e.target === modal) closeMode();
     }));
     document.addEventListener("keydown", (e => {
         if (e.code === "Escape" && modal.classList.contains("show")) closeMode();
     }));
-
-    /*-------------------*/
-
-    const modalSocials = document.querySelectorAll("[data-modalsocial]"), 
-    modalSocial = document.querySelector(".modalsocial"), 
-    modalSocialCloseBtn = document.querySelector("[data-closesocial]"),
-    socialIcons = document.querySelector('.modal__social-items');
-
-    modalSocials.forEach((btn => {
-        btn.addEventListener("click", (() => {
-            modalSocial.classList.add("show");
-            modalSocial.classList.remove("hide");
-            document.body.style.overflow = "hidden";
-        }));
-    }));
-    function closeModeSocial() {
-        modalSocial.classList.add("hide");
-        modalSocial.classList.remove("show");
-        document.body.style.overflow = "";
-    }
-    modalSocialCloseBtn.addEventListener("click", closeModeSocial);
-    socialIcons.addEventListener("click", closeModeSocial);
-    modalSocial.addEventListener("click", (e => {
-        if (e.target === modalSocial) closeModeSocial();
-    }));
-    document.addEventListener("keydown", (e => {
-        if (e.code === "Escape" && modalSocial.classList.contains("show")) closeModeSocial();
-    }));
-
 
 
 /*------------langs----------------*/
@@ -1345,10 +1318,7 @@
         const copyBtnThird = document.querySelector('#copy-third'); 
         const textToCopyFourth = document.querySelector('#copy-text-fourth');
         const copyBtnFourth = document.querySelector('#copy-fourth');
-
-        const copyBtnModal = document.querySelector('.modalsocial__link'); 
-
-
+       
         copyBtn.addEventListener('click', function copyTextOne () {         
             navigator.clipboard.writeText(textToCopyOne.innerText);
         });
@@ -1363,11 +1333,7 @@
         copyBtnFourth.addEventListener('click', function copyTextFourth () {         
             navigator.clipboard.writeText(textToCopyFourth.innerText);
         });
-
-        copyBtnModal.addEventListener('click', function copyTextModal () {         
-            navigator.clipboard.writeText('https://benevolent-concha-5953e5.netlify.app/');
-        });
-        
+    
     };
 
 
@@ -1375,7 +1341,6 @@
 
     const form = document.querySelectorAll('form'),
     inputs = document.querySelectorAll('input'),
-
 
 
     phoneInputs = document.querySelectorAll('input[name="contact-item__tel"]');
