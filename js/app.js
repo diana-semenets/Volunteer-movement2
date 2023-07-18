@@ -329,68 +329,7 @@
         if (e.code === "Escape" && modal.classList.contains("show")) closeMode();
     }));
 
-/*---------------Valuta---------------------------
 
-    const btnValuta = document.querySelector(".sum__input-title");
-    const bthArrowValuta = document.querySelector(".sum__input-icon");
-    const listValuta = document.querySelector(".sum__valuta");
-    const itemValuta = listValuta.querySelectorAll(".sum__valuta-item");
-    const dropdownItemHidden = document.querySelector(".dropdown__item-hidden");
-    const sumBtnValuta = document.querySelectorAll('#sum__btn-valuta');
-
-    let oneHundred = document.querySelector(".one-hundred");
-    let fiveHundred = document.querySelector(".five-hundred");
-    let thousand = document.querySelector(".thousand");
-    let sumDonat = document.querySelector("#sum-donat");
-
-    btnValuta.addEventListener("click", (function() {
-        listValuta.classList.toggle("hidden");
-        bthArrowValuta.classList.toggle("arrow-open");
-        this.classList.add("sum__input-title--active");
-    }));
-    itemValuta.forEach((function(listItem) {
-        listItem.addEventListener("click", (function(e) {
-            e.stopPropagation();
-            btnValuta.innerText = this.innerText;            
-            dropdownItemHidden.value = this.dataset.value;            
-            listValuta.classList.add("hidden");
-            bthArrowValuta.classList.remove("arrow-open");
-
-           ----валюта на баттонах---------
-            
-            sumBtnValuta.forEach((item) => {
-                item.innerHTML = this.dataset.value;
-            })
-            
-        }));
-    }));
-    document.addEventListener("click", (function(e) {
-        if (e.target !== btnValuta) {
-            listValuta.classList.add("hidden");
-            bthArrowValuta.classList.remove("arrow-open");
-        }
-    }));
-    document.addEventListener("keydown", (function(e) {
-        if (e.key === "Tab" || e.key === "Escape") {
-            listValuta.classList.add("hidden");
-            bthArrowValuta.classList.remove("arrow-open");
-        }
-    }));
-    oneHundred.addEventListener("click", (function() {
-        oneHundred = 100;
-        sumDonat.value = oneHundred;
-    }));
-    fiveHundred.addEventListener("click", (function() {
-        fiveHundred = 500;
-        sumDonat.value = fiveHundred;
-    }));
-    thousand.addEventListener("click", (function() {
-        thousand = 1e3;
-        sumDonat.value = thousand;
-    }));
-
-    
-   */ 
 
 /*------------langs----------------*/
 
