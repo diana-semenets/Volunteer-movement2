@@ -354,7 +354,7 @@
     }
     modalSocialCloseBtn.addEventListener("click", closeModeSocial);
     modalSocial.addEventListener("click", (e => {
-        if (e.target === modal) closeModeSocial();
+        if (e.target === modalSocial) closeModeSocial();
     }));
     document.addEventListener("keydown", (e => {
         if (e.code === "Escape" && modalSocial.classList.contains("show")) closeModeSocial();
@@ -1331,7 +1331,6 @@
         const textToCopyFourth = document.querySelector('#copy-text-fourth');
         const copyBtnFourth = document.querySelector('#copy-fourth');
 
-        //const textToCopyModal = document.querySelector('.modalsocial__link');
         const copyBtnModal = document.querySelector('.modalsocial__link'); 
 
 
