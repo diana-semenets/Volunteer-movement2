@@ -504,60 +504,6 @@ h6 {
   }
 }
 
-.footer__form {
-  padding-bottom: 7.0625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid #4A4A4A;
-}
-
-@supports (gap: clamp( 1.875rem , -5.2875rem  +  19.1vw , 13.8125rem )) {
-  .footer__form {
-    gap: clamp( 1.875rem , -5.2875rem  +  19.1vw , 13.8125rem );
-  }
-}
-
-@supports not (gap: clamp( 1.875rem , -5.2875rem  +  19.1vw , 13.8125rem )) {
-  .footer__form {
-    gap: calc(1.875rem + 11.9375 * (100vw - 37.5rem) / 62.5);
-  }
-}
-
-.footer__form-text {
-  max-width: 547px;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2.1875rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 60%;
-          flex: 1 60%;
-}
-
-.footer__form-input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 40%;
-          flex: 1 40%;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-  position: relative;
-}
-
-.footer__form-input input {
-  width: 100%;
-  padding: 1.8125rem 0 1.8125rem 2.5rem;
-}
-
-.footer__form-btn {
-  position: absolute;
-  top: 25px;
-  right: 32px;
-}
-
 .footer__content {
   margin-top: 82px;
   margin-bottom: 116px;
@@ -1124,9 +1070,7 @@ h6 {
       -ms-transform: scale(1.02);
           transform: scale(1.02);
 }
-.why {
-  
-}
+
 .why__box {
   max-width: 1440px;
   margin: 0 auto;
@@ -1507,40 +1451,9 @@ h6 {
   margin-top: 95px;
   border-radius: 24px; 
   border: 1px solid #4A4A4A;
-  padding: 97px 40px 86px;
-}
-.tab__card-label {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-}
-.card-mail {  
-  margin: 16px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 16px;
+  padding: 0 40px 86px;
 }
 
-.card-mail input {
-  width: 100%;
-  padding: 26px 44px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  border: 1px solid #4A4A4A;
-}
-.card-mail-text {  
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-}
 .tab__card-btn {
   width: 100%;
   margin-top: 56px;
@@ -2358,8 +2271,7 @@ h6 {
   .cars__title {
     max-width: 320px;
     font-size: 30px;
-    font-weight: 500;
-  
+    font-weight: 500;  
   }
 }
 
@@ -2372,10 +2284,6 @@ h6 {
     display: none;
   }
 
-  .footer__form {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 
   .footer__lists {
     -ms-flex-wrap: wrap;
@@ -2468,29 +2376,15 @@ h6 {
   .items-item-arrow {
     padding: 16px 24px 16px 0;
   }
- /* .donat-tabs__navigation {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  } */
 
   .donat-tabs__title {
     width: 100%;
     margin-bottom: 24px;
   } 
 
-  .card-mail {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 16px;
-  }
-
   .list-item {
     display: block;
   }
-
- /* .tab__card {
-    padding: 28px 16px;
-  } */
 
   .modal__wrapper {
     max-width: 600px;
@@ -2543,10 +2437,6 @@ h6 {
     padding-left: inherit;
   }
 
-  .footer__form {
-    gap: inherit;
-  }
-
   .header-page__logo {
     padding-left: inherit;
   }
@@ -2590,22 +2480,7 @@ h6 {
   .header__logo-img a img {
     margin-left: 24px;
   }
-  .footer__form {
-    display: block;
-    padding-bottom: 69px;
-  }
 
-  .footer__form-input {
-    margin-top: 32px;
-  }
-
-  .footer__form-input input {
-    height: 56px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    padding: 14px 24px;
-  }
   ._icon-arrowicon::before {
     margin-top: 5px;
   }
@@ -2625,6 +2500,7 @@ h6 {
   }
 
   .footer__btn-main {
+    height: 56px;
     padding: 16px 24px;
     font-size: 16px;
     line-height: 20px;
@@ -2638,10 +2514,6 @@ h6 {
   }
   .footer__list:last-child {
     margin-top: 46px;
-  }
-  .footer__form-text {
-    font-size: 20px;
-    line-height: 28px; 
   }
   .title {
     line-height: 44px;
@@ -2768,17 +2640,7 @@ h6 {
   .donat-title {  
     margin-bottom: 40px;
   }
-  
-  .card-mail input {
-    height: 56px;
-    padding: 12px 24px;
-    font-size: 14px;
-  }
 
-  .card-mail-text {
-    font-size: 12px;
-    line-height: 15px;
-  }
   .tab__card-btn a, .tab__mono-btn a {
     font-size: 16px;
     font-weight: 600; 
@@ -2817,67 +2679,7 @@ h6 {
   ._icon-copy {
     margin-left: 20px;  
   }
- /* .donat__grid {    
-    flex-wrap: wrap-reverse;
-  }
-  
 
-  .card-sum input {
-    width: 100%;
-    padding: 12px 28px;
-    font-size: 25px;
-    line-height: 30px;
-  }
-
-  .sum__input {
-    width: 83px;
-  }
-
-  .sum__input-title {
-    width: 83px;
-    height: 56px;
-    padding: 18px 12px;
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  .card-sum__btn {
-    width: 111px;
-    padding: 9.5px 0;
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  .sum__valuta {
-    width: 83px;
-  }
-
-  .sum__valuta-item {
-    font-size: 18px;
-  }
-
-  
-
-  .tab__card-btn {
-    padding: 16px 24px;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .tab__btn {
-    padding: 16px 24px;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  
-
-  
-
-  .sum__input-icon {
-    top: 20px;
-    right: 85px;
-  } */
 
   .contact-form {
     padding-left: 0;
