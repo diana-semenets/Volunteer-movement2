@@ -1720,6 +1720,7 @@ h6 {
   left: 0;
 }
 .modal__social {
+  max-width: 789px;
   margin-top: 68px;
 }
 .modal__social-title {
@@ -1734,6 +1735,9 @@ h6 {
 }
 .modal__social-items a {
   display: block;
+}
+.modal__social-items a img {
+  width: 100%;
 }
 .header-page {
   z-index: 2;
@@ -2719,8 +2723,20 @@ h6 {
   ._icon-copy {
     margin-left: 20px;  
   }
-
-
+  .modalsocial__title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  .modalsocial__link {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .modal__social-title {
+    line-height: 28px;
+  }
   .contact-form {
     padding-left: 0;
     padding-right: 0;
