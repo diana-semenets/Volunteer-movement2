@@ -308,7 +308,13 @@
             }));
         }
     }), 0);
-    const modalTrigger = document.querySelectorAll("[data-modal]"), modal = document.querySelector(".modal"), modalCloseBtn = document.querySelector("[data-close]");
+
+   /*------------popups----------------*/ 
+
+    const modalTrigger = document.querySelectorAll("[data-modal]"), 
+    modal = document.querySelector(".modal"), 
+    modalCloseBtn = document.querySelector("[data-close]");
+
     modalTrigger.forEach((btn => {
         btn.addEventListener("click", (() => {
             modal.classList.add("show");
@@ -327,6 +333,31 @@
     }));
     document.addEventListener("keydown", (e => {
         if (e.code === "Escape" && modal.classList.contains("show")) closeMode();
+    }));
+
+    /*-------------------*/
+
+    const modalSocials = document.querySelectorAll("[data-modalsocial]"), 
+    modalSocial = document.querySelector(".modalsocial"), 
+    modalSocialCloseBtn = document.querySelector("[data-closesocial]");
+    modalSocials.forEach((btn => {
+        btn.addEventListener("click", (() => {
+            modalSocial.classList.add("show");
+            modalSocial.classList.remove("hide");
+            document.body.style.overflow = "hidden";
+        }));
+    }));
+    function closeModeSocial() {
+        modalSocial.classList.add("hide");
+        modalSocial.classList.remove("show");
+        document.body.style.overflow = "";
+    }
+    modalSocialCloseBtn.addEventListener("click", closeModeSocial);
+    modalSocial.addEventListener("click", (e => {
+        if (e.target === modal) closeModeSocial();
+    }));
+    document.addEventListener("keydown", (e => {
+        if (e.code === "Escape" && modalSocial.classList.contains("show")) closeModeSocial();
     }));
 
 
@@ -1222,7 +1253,6 @@
 
           case "/partners.html":
             currentTexts = partnersTexts;
-
             break;
 
           case "/vacancy.html":
@@ -1301,6 +1331,9 @@
         const textToCopyFourth = document.querySelector('#copy-text-fourth');
         const copyBtnFourth = document.querySelector('#copy-fourth');
 
+        //const textToCopyModal = document.querySelector('.modalsocial__link');
+        const copyBtnModal = document.querySelector('.modalsocial__link'); 
+
 
         copyBtn.addEventListener('click', function copyTextOne () {         
             navigator.clipboard.writeText(textToCopyOne.innerText);
@@ -1316,6 +1349,11 @@
         copyBtnFourth.addEventListener('click', function copyTextFourth () {         
             navigator.clipboard.writeText(textToCopyFourth.innerText);
         });
+
+        copyBtnModal.addEventListener('click', function copyTextModal () {         
+            navigator.clipboard.writeText('https://benevolent-concha-5953e5.netlify.app/');
+        });
+        
     };
 
 
