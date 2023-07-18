@@ -339,7 +339,9 @@
 
     const modalSocials = document.querySelectorAll("[data-modalsocial]"), 
     modalSocial = document.querySelector(".modalsocial"), 
-    modalSocialCloseBtn = document.querySelector("[data-closesocial]");
+    modalSocialCloseBtn = document.querySelector("[data-closesocial]"),
+    socialIcons = document.querySelector('.modal__social-items');
+
     modalSocials.forEach((btn => {
         btn.addEventListener("click", (() => {
             modalSocial.classList.add("show");
@@ -353,6 +355,7 @@
         document.body.style.overflow = "";
     }
     modalSocialCloseBtn.addEventListener("click", closeModeSocial);
+    socialIcons.addEventListener("click", closeModeSocial);
     modalSocial.addEventListener("click", (e => {
         if (e.target === modalSocial) closeModeSocial();
     }));
@@ -661,6 +664,18 @@
         "home_page-70": {
             ukr: "Підтримати збір",
             en: "Support fundraising"
+        },
+        "home_page-71": {
+            ukr: "Поділись сайтом та поширюй збір коштів на авто для ЗСУ!",
+            en: "Share the site and spread the fundraiser for cars for the Armed Forces of Ukraine!"
+        },
+        "home_page-72": {
+            ukr: "Копіювати посилання на сайт",
+            en: "Copy the link to the site"
+        },
+        "home_page-73": {
+            ukr: "Поділитись у соціальних мережах",
+            en: "Share on social networks"
         }
     };
     const partnersTexts = {
