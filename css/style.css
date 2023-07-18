@@ -503,10 +503,12 @@ h6 {
 .footer__content {
   margin-top: 82px;
   margin-bottom: 116px;
+  padding-top: 90px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 56% 31.8% auto;
   grid-template-columns: 56% 31.8% auto;
+  border-top: 1px solid #4A4A4A;
 }
 
 .footer__logo {
@@ -1387,6 +1389,7 @@ h6 {
   height: 132px;
   border: 1px solid #1A1A1A;
   border-radius: 50%;
+  background-color: #fff;
 }
 
 .progress__card {
@@ -1537,7 +1540,7 @@ h6 {
 
 /*-------------------------*/
 .contact-form {
-  padding: 82px 38px 77px;
+  padding: 82px 38px 10px;
   background-color: #1A1A1A;
 }
 
@@ -2542,6 +2545,11 @@ h6 {
     margin-bottom: 55px;
     justify-content: center;
   }
+  .footer__logo-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+  }
 
   .footer__btn-main {
     height: 56px;
@@ -2613,7 +2621,7 @@ h6 {
   }
 
   .why__img{
-      background-image: url("../img/why-back.png"); 
+      background-image: url("../img/why-back.webp"); 
     }
   .why__img {
     width: auto;
@@ -2665,13 +2673,13 @@ h6 {
 
   .progress__btn {
     border: none;
+    background-color: #F6F6FC;
   }
   .donat__box {
     padding-bottom: 0;
   }
   .donat__content {
-    margin-top: 41px;    
-    
+    margin-top: 41px;      
     padding: 28px 10px 0;
   }
   .donat-tabs__title {
@@ -2698,7 +2706,7 @@ h6 {
     margin-top: 16px;
   }
   .tab__mono-btn {
-    margin-top: 40px;
+    margin-top: 0;
     margin-bottom: 0;
   }
   .invoice {
