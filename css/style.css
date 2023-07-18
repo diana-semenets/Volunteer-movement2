@@ -2432,6 +2432,19 @@ h6 {
   .list-item {
     display: block;
   }
+  .invoice {
+    margin-bottom: 16px;
+  }
+  .invoice-title {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .list-item {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  }
 
   .modal__wrapper {
     max-width: 600px;
@@ -2709,19 +2722,7 @@ h6 {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .invoice {
-    margin-bottom: 16px;
-  }
-  .invoice-title {
-    margin-top: 0;
-    font-size: 16px;
-    line-height: 20px;
-  }
-  .list-item {
-    margin-bottom: 12px;
-    font-size: 14px;
-    line-height: 18px;
-  }
+  
   .donat__btns {
     flex-wrap: wrap-reverse;
   }
@@ -2896,7 +2897,3 @@ h6 {
 .partner__item-skoda::before { 
   background-image: url('../img/skoda_logo.webp');
  }
-
-@media (max-width: 29.99875em){я
-  .why__img{ background-image: url('../img/why-back.webp'); }
-}
