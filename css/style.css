@@ -1621,6 +1621,9 @@ h6 {
   line-height: 22px;
   color: #A9A9A9;
 }
+.input.error {
+  border: 2px solid red;
+}
 
 .modal, .modalsocial {
   position: fixed;
