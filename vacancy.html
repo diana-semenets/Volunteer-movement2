@@ -116,23 +116,23 @@
 			</section>
 
 			<section class="contact-form">
-				<form class="contact-form__box" id="contact-form">
+				<form class="contact-form__box js-form" id="contact-form" action="" novalidate>
 					<div class="contact-form__title" data-lang="home_page-56">Заповнюйте форму і ми з вами зв’яжемось</div>
 					<div class="contact-form__content">
-						<div class="contact-form__item contact-item">
+						<div class="contact-form__item contact-item form__group">
 							<label for="contact-item__name" class="tab__card-label contact-item__label" data-lang="home_page-57">Ім’я</label>
-							<input required type="text" placeholder="Перемога" class="contact-item__input input" name="contact-item__name" id="contact-item__name">
+							<input required type="text" placeholder="Перемога" class="contact-item__input input input js-input" name="name" id="contact__name">
 						</div>
-						<div class="contact-form__item contact-item">
+						<div class="contact-form__item contact-item form__group">
 							<label for="contact-item__tel" class="tab__card-label contact-item__label" data-lang="home_page-58">Номер телефону</label>
-							<input required type="tel" placeholder="+38 067 111 11 11" class="contact-item__input input" name="contact-item__tel" id="contact-item__tel">
+							<input required type="tel" placeholder="+38 067 111 11 11" class="contact-item__input input input js-input js-input-phone" name="tel" id="contact__tel">
 						</div>
-						<div class="contact-form__item contact-item">
+						<div class="contact-form__item contact-item form__group">
 							<label for="contact-item__email" class="tab__card-label contact-item__label">Email</label>
-							<input required type="email" placeholder="peremoga@gmail.com" class="contact-item__input input" name="contact-item__email" id="contact-item__email">
+							<input required type="email" placeholder="peremoga@gmail.com" class="contact-item__input input input js-input js-input-email" name="email" id="contact__email">
 						</div>
 					</div>
-					<button type="button" class="contact-form__btn" data-modal data-lang="home_page-59" name="donat">Надіслати</button>
+					<button type="submit" class="contact-form__btn" data-modal data-lang="home_page-59" name="donat">Надіслати</button>
 				</form>
 			</section>
 
