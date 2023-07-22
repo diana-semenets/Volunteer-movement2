@@ -316,13 +316,13 @@
     modalCloseBtn = document.querySelector("[data-close]");
     const modalLink = document.querySelector('.modal__btn');
 
-    modalTrigger.forEach((btn => {
+/*    modalTrigger.forEach((btn => {
         btn.addEventListener("click", (() => {
             modal.classList.add("show");
             modal.classList.remove("hide");
             document.body.style.overflow = "hidden";
         }));
-    }));
+    }));  */
     function closeMode() {
         modal.classList.add("hide");
         modal.classList.remove("show");
@@ -1341,64 +1341,82 @@
 
     /*------------forms----------------*/
 
- /*   const form = document.querySelectorAll('form'),
-    inputs = document.querySelectorAll('input'),
 
 
-    phoneInputs = document.querySelectorAll('input[name="contact-item__tel"]');
+
+ /*   phoneInputs = document.querySelectorAll('input[name="contact-item__tel"]');
 
     phoneInputs.forEach(item => {
         item.addEventListener('input', () => {
             item.value = item.value.replace(/\D/, '');
         });
-    });
+    }); */
 
-    const message = {
-        loading: 'Завантаження...',
-        success: 'Дякуємо, очікуйте на відповідь',
-        failure: 'Помилка...'
-    };
+    const forms = document.querySelectorAll('form'),
+    inputs = document.querySelectorAll('input'),
+    phoneInputs = document.querySelectorAll('input[name="tel"]');
 
-    const postData = async (url, data) => {
-        document.querySelector('.status').textContent = message.loading;
-        let res = await fetch(url, {
-        method: "POST",
-        body: data
-    });
+phoneInputs.forEach(item => {
+  item.addEventListener('input', () => {
+      item.value = item.value.replace(/\D/, '');
+  });
+});
 
-    return await res.text();
-    };
+const message = {
+  loading: 'Загрузка...',
+  success: 'Спасибо! Скоро мы с вами свяжемся',
+  failure: 'Что-то пошло не так...'
+};
 
-    const clearInputs = () => {
-        inputs.forEach(item => {
-        item.value = '';
-        });
-    };
+/*        const postData = async (url, data) => {
+  document.querySelector('.status').textContent = message.loading;
+  let res = await fetch(url, {
+      method: "POST",
+      body: data
+  });
 
-    form.forEach(item => {
-        item.addEventListener('submit', (e) => {
-            e.preventDefault();
+  return await res.text();
+  console.log(res);
+};
 
-            let statusMessage = document.createElement('div');
-            statusMessage.classList.add('status');
-            item.appendChild(statusMessage);
+const clearInputs = () => {
+  inputs.forEach(item => {
+      item.value = '';
+  });
+};  */
 
-            const formData = new FormData(item);
+forms.forEach(item => {
+  postData(item);
+});
 
-            postData('server.php', formData)
-                .then(res => {
-                    console.log(res);
-                    statusMessage.textContent = message.success;
-                })
-                .catch(() => statusMessage.textContent = message.failure)
-                .finally(() => {
-                    clearInputs();
-                    setTimeout(() => {
-                        statusMessage.remove();
-                    }, 5000);
-                });
-            });
-    });   */
+function postData(form) {
+form.addEventListener('submit', (e) => {
+e.preventDefault();
+
+let statusMessage = document.createElement('div');
+statusMessage.classList.add('status');
+item.appendChild(statusMessage);
+
+const formData = new FormData(form);
+
+fetch('server.php', {
+  method:'POST',
+  body: FormData
+}).then(data => data.text())
+.then(data => {
+  console.log(data);
+  statusMessage.textContent = message.success;
+  form.reset();
+  statusMessage.remove();
+}).catch(() => {
+  statusMessage.textContent = message.failure;
+}).finally(() => {
+  form.reset();
+});
+
+});
+
+}
 
 
 //    let form = document.querySelector('.contact-form__box'),
@@ -1418,7 +1436,9 @@
 
 //}
 
-let form = document.querySelector('.js-form'),
+//валидация!------------------------------
+
+/*let form = document.querySelector('.js-form'),
     formInputs = document.querySelectorAll('.js-input'),
     inputEmail = document.querySelector('.js-input-email'),
     inputPhone = document.querySelector('.js-input-phone');
@@ -1472,7 +1492,7 @@ form.onsubmit = function () {
         inputPhone.classList.remove('error');
     }
     
-} 
+} */
 
 
 
