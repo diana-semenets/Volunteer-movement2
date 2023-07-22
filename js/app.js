@@ -1352,7 +1352,7 @@
         });
     }); */
 
-    const forms = document.querySelectorAll('form'),
+    const form = document.querySelectorAll('form'),
     inputs = document.querySelectorAll('input'),
     phoneInputs = document.querySelectorAll('input[name="tel"]');
 
@@ -1368,55 +1368,46 @@ const message = {
   failure: 'Что-то пошло не так...'
 };
 
-/*        const postData = async (url, data) => {
-  document.querySelector('.status').textContent = message.loading;
-  let res = await fetch(url, {
-      method: "POST",
-      body: data
-  });
+const postData = async (url, data) => {
+    document.querySelector('.status').textContent = message.loading;
+    let res = await fetch(url, {
+        method: "POST",
+        body: data
+    });
 
-  return await res.text();
-  console.log(res);
+    return await res.text();
 };
 
 const clearInputs = () => {
-  inputs.forEach(item => {
-      item.value = '';
-  });
-};  */
+    inputs.forEach(item => {
+        item.value = '';
+    });
+};
 
-forms.forEach(item => {
-  postData(item);
+form.forEach(item => {
+    item.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let statusMessage = document.createElement('div');
+        statusMessage.classList.add('status');
+        item.appendChild(statusMessage);
+
+        const formData = new FormData(item);
+
+        postData('server.php', formData)
+            .then(res => {
+                console.log(res);
+                statusMessage.textContent = message.success;
+            })
+            .catch(() => statusMessage.textContent = message.failure)
+            .finally(() => {
+                clearInputs();
+                setTimeout(() => {
+                    statusMessage.remove();
+                }, 5000);
+            });
+    });
 });
-
-function postData(form) {
-form.addEventListener('submit', (e) => {
-e.preventDefault();
-
-let statusMessage = document.createElement('div');
-statusMessage.classList.add('status');
-item.appendChild(statusMessage);
-
-const formData = new FormData(form);
-
-fetch('server.php', {
-  method:'POST',
-  body: FormData
-}).then(data => data.text())
-.then(data => {
-  console.log(data);
-  statusMessage.textContent = message.success;
-  form.reset();
-  statusMessage.remove();
-}).catch(() => {
-  statusMessage.textContent = message.failure;
-}).finally(() => {
-  form.reset();
-});
-
-});
-
-}
 
 
 //    let form = document.querySelector('.contact-form__box'),
