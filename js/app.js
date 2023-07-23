@@ -316,6 +316,13 @@
     modalCloseBtn = document.querySelector("[data-close]");
     const modalLink = document.querySelector('.modal__btn');
 
+    function showModal (){
+        modal.classList.remove("hide");
+            modal.classList.add("show");
+            
+            document.body.style.overflow = "hidden";
+    }
+
 /*    modalTrigger.forEach((btn => {
         btn.addEventListener("click", (() => {
             modal.classList.add("show");
@@ -1356,16 +1363,16 @@
     inputs = document.querySelectorAll('input'),
     phoneInputs = document.querySelectorAll('input[name="tel"]');
 
-phoneInputs.forEach(item => {
-  item.addEventListener('input', () => {
-      item.value = item.value.replace(/\D/, '');
-  });
+    phoneInputs.forEach(item => {
+        item.addEventListener('input', () => {
+        item.value = item.value.replace(/\D/, '');
+    });
 });
 
 const message = {
-  loading: 'Загрузка...',
-  success: 'Спасибо! Скоро мы с вами свяжемся',
-  failure: 'Что-то пошло не так...'
+  loading: 'Почекайте...',
+//  success: showModal (),
+  failure: 'Помилка'
 };
 
 const postData = async (url, data) => {
@@ -1394,12 +1401,13 @@ form.forEach(item => {
 
         const formData = new FormData(item);
 
-        postData('server.php', formData)
+        postData('sendmail/sendmail.php', formData)
             .then(res => {
                 console.log(res);
-                statusMessage.textContent = message.success;
+                showModal();
             })
-            .catch(() => statusMessage.textContent = message.failure)
+            .catch(() => 
+            statusMessage.textContent = message.failure)
             .finally(() => {
                 clearInputs();
                 setTimeout(() => {
@@ -1407,6 +1415,7 @@ form.forEach(item => {
                 }, 5000);
             });
     });
+    
 });
 
 
