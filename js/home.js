@@ -73,7 +73,7 @@ let endX;
     const copyBtnModal = document.querySelector('.modalsocial__link'); 
 
     copyBtnModal.addEventListener('click', function copyTextModal () {         
-        navigator.clipboard.writeText('https://benevolent-concha-5953e5.netlify.app/');
+        navigator.clipboard.writeText('https://volunteer-movement.netlify.app/');
     });
         
     
