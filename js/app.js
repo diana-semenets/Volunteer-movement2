@@ -317,11 +317,10 @@
     const modalLink = document.querySelector('.modal__btn');
 
     function showModal (){
-        btn.addEventListener("click", (() => {
+        modal.classList.remove("hide");
             modal.classList.add("show");
-            modal.classList.remove("hide");
+            
             document.body.style.overflow = "hidden";
-        }));
     }
 
 /*    modalTrigger.forEach((btn => {
@@ -1350,30 +1349,21 @@
     /*------------forms----------------*/
 
 
-
-
- /*   phoneInputs = document.querySelectorAll('input[name="contact-item__tel"]');
-
-    phoneInputs.forEach(item => {
-        item.addEventListener('input', () => {
-            item.value = item.value.replace(/\D/, '');
-        });
-    }); */
-
     const form = document.querySelectorAll('form'),
     inputs = document.querySelectorAll('input'),
     phoneInputs = document.querySelectorAll('input[name="tel"]');
 
-phoneInputs.forEach(item => {
-  item.addEventListener('input', () => {
-      item.value = item.value.replace(/\D/, '');
-  });
+    phoneInputs.forEach(item => {
+        item.addEventListener('input', () => {
+        item.value = item.value.replace(/\D/, '');
+    });
+    
+
 });
 
 const message = {
-  loading: 'Загрузка...',
-  success: showModal (),
-  failure: 'Что-то пошло не так...'
+  loading: 'Почекайте...',
+  failure: 'Помилка'
 };
 
 const postData = async (url, data) => {
@@ -1416,91 +1406,24 @@ form.forEach(item => {
                 }, 5000);
             });
     });
+    
 });
 
 
-//    let form = document.querySelector('.contact-form__box'),
-//    nameValue = document.querySelector('#contact__name'),
-//    inputEmail = document.querySelector('#contact__email'),
- //   phoneValue = document.querySelector('#contact__tel');
-    
-//    const formBtn = document.querySelector(".contact-form__btn");
-
-    
-    
-
-//  formBtn.addEventListener ("submit", () => {
- //   formValidate();
-//  })
 
 
-//}
+window.onscroll = function() {myFunction()};
 
-//валидация!------------------------------
+const header = document.querySelector("header");
+const sticky = header.offsetTop;
 
-/*let form = document.querySelector('.js-form'),
-    formInputs = document.querySelectorAll('.js-input'),
-    inputEmail = document.querySelector('.js-input-email'),
-    inputPhone = document.querySelector('.js-input-phone');
-
-
-function validateEmail(email) {
-    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }
-
-
-
-function validatePhone(phone) {
-    let re = /^[0-9\s]*$/;
-    return re.test(String(phone));
-}
-
-form.onsubmit = function () {
-    let emailVal = inputEmail.value,
-        phoneVal = inputPhone.value,
-        emptyInputs = Array.from(formInputs).filter(input => input.value === '');
-
-
-    formInputs.forEach(function (input) {
-        if (input.value === '') {
-            input.classList.add('error');
-
-        } else {
-            input.classList.remove('error');
-        }
-    });
-
-    if (emptyInputs.length !== 0) {
-        console.log('inputs not filled');
-        return false;
-    }
-    if(!validateEmail(emailVal)) {
-        console.log('email not valid');
-        inputEmail.classList.add('error');
-        return false;
-    } else {
-        inputEmail.classList.remove('error');
-        
-    }
-    
-    if (!validatePhone(phoneVal)) {
-        console.log('phone not valid');
-        inputPhone.classList.add('error');
-        return false;
-    } else {
-        inputPhone.classList.remove('error');
-    }
-    
-} */
-
-
-
-
-
-
-
-
 
 
 
