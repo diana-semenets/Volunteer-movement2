@@ -181,12 +181,12 @@
 
 
 			<section class="contact-form">
-				<form class="contact-form__box js-form" id="contact-form" action="" novalidate>
+				<form class="contact-form__box js-form" id="contact-form" action="server.php" method="POST" enctype="multipart/form-data">
 					<div class="contact-form__title" data-lang="home_page-56">Заповнюйте форму і ми з вами зв’яжемось</div>
 					<div class="contact-form__content">
 						<div class="contact-form__item contact-item form__group">
 							<label for="contact-item__name" class="tab__card-label contact-item__label" data-lang="home_page-57">Ім’я</label>
-							<input required type="text" placeholder="Перемога" class="contact-item__input input input js-input" name="name" id="contact__name">
+							<input required type="text" placeholder="Перемога" class="contact-item__input input input js-input" name="name" size="30" id="contact__name">
 						</div>
 						<div class="contact-form__item contact-item form__group">
 							<label for="contact-item__tel" class="tab__card-label contact-item__label" data-lang="home_page-58">Номер телефону</label>
