@@ -30,7 +30,7 @@
   src: url("fonts/icomoon.eot?kvaiyr#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?kvaiyr") format("truetype"), url("fonts/icomoon.woff?kvaiyr") format("woff"), url("fonts/icomoon.svg?kvaiyr#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 
 [class^=icon-],
@@ -113,6 +113,7 @@ body {
   line-height: 1;
   font-family: "Montserrat";
   font-size: 1.25rem;
+  font-display: swap;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -404,7 +405,12 @@ h6 {
     padding-left: calc(0.625rem + 4.0625 * (100vw - 37.5rem) / 83.75);
   }
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #435ff0;
+}
 .header__logo-text {
   width: 181px;
   margin-left: 0.875rem;
