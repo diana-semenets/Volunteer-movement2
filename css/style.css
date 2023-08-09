@@ -182,34 +182,10 @@ h6 {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-/*  display: -webkit-box;
-  display: -ms-flexbox;
- 
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          */
   overflow: hidden; 
-  width: 100%;
-  
+  width: 100%;  
 }
 
-/*  .wrapper > main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-} 
-
-.wrapper > * {
-  min-width: 0;
-} */
-
-/*
-(i) Стили будут применяться ко 
-всем классам содержащим *__container
-Например header__container, main__container и т.д.
-Снипет (HTML): cnt
-*/
 
 [class*=__container] {
   max-width: 73.125rem;
@@ -410,6 +386,9 @@ h6 {
   top: 0;
   width: 100%;
   background-color: #435ff0;
+}
+.sticky .header__box {
+  border-bottom: none;
 }
 .header__logo-text {
   width: 181px;
