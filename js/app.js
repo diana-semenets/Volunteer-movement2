@@ -1392,7 +1392,7 @@ form.forEach(item => {
 
         const formData = new FormData(item);
 
-        postData('server.php', formData)
+        postData( formData)
             .then(res => {
                 console.log(res);
                 showModal();
