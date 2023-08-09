@@ -317,10 +317,11 @@
     const modalLink = document.querySelector('.modal__btn');
 
     function showModal (){
-        modal.classList.remove("hide");
+        btn.addEventListener("click", (() => {
             modal.classList.add("show");
-            
+            modal.classList.remove("hide");
             document.body.style.overflow = "hidden";
+        }));
     }
 
 /*    modalTrigger.forEach((btn => {
@@ -1363,16 +1364,16 @@
     inputs = document.querySelectorAll('input'),
     phoneInputs = document.querySelectorAll('input[name="tel"]');
 
-    phoneInputs.forEach(item => {
-        item.addEventListener('input', () => {
-        item.value = item.value.replace(/\D/, '');
-    });
+phoneInputs.forEach(item => {
+  item.addEventListener('input', () => {
+      item.value = item.value.replace(/\D/, '');
+  });
 });
 
 const message = {
-  loading: 'Почекайте...',
-//  success: showModal (),
-  failure: 'Помилка'
+  loading: 'Загрузка...',
+  success: showModal (),
+  failure: 'Что-то пошло не так...'
 };
 
 const postData = async (url, data) => {
@@ -1401,7 +1402,7 @@ form.forEach(item => {
 
         const formData = new FormData(item);
 
-        postData('sendmail/sendmail.php', formData)
+        postData('server.php', formData)
             .then(res => {
                 console.log(res);
                 showModal();
@@ -1415,7 +1416,6 @@ form.forEach(item => {
                 }, 5000);
             });
     });
-    
 });
 
 
